@@ -5,7 +5,7 @@
 // Base 10
 // Time: O(log(x)^2)
 
-struct Solution {}
+pub struct Solution {}
 struct SigNum {
     num: i32,
     significance: i32,
@@ -92,8 +92,4 @@ impl Solution {
             *cur_ord += 1;
         }
     }
-}
-
-pub fn main() {
-    println!("{}", Solution::is_palindrome(11));
 }
