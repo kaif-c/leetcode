@@ -4,6 +4,8 @@ using namespace std;
 
 class Solution {
 public:
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     vector<int> twoSum(vector<int>& nums, int target) {
         // Map of every element (key) to its index (value) 
         unordered_map<int, int> map;
