@@ -25,17 +25,7 @@ public:
         auto head = it;
 
         /// Loop over the rest
-        while (true) {
-            /// When we reach the end of either lists
-            /// Makes sure we exit before we compute any nullptr
-            if (!other_it)
-                return head;
-            if (!it->next) {
-                it->next = other_it;
-                return head;
-            }
-
-            /// Comparison
+        while (other_it && it->next) {
             if (it->next->val > other_it->val) {
                 auto temp = it->next;
                 it->next = other_it;
@@ -43,5 +33,15 @@ public:
             }
             it = it->next;
         }
+        /// When we reach the end of either lists
+        /// Stitch the rest if either has any elements left
+        if (!other_it)
+            return head;
+        if (!it->next) {
+            it->next = other_it;
+            return head;
+        }
+
+        return head;
     }
 };
