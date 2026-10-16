@@ -1,5 +1,5 @@
-mod looped_modulus;
-use crate::looped_modulus::Solution;
+mod looped_xor;
+use crate::looped_xor::Solution;
 use std::process::ExitCode;
 
 struct Case {
