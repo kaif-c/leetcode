@@ -14,7 +14,7 @@ pub fn main() -> ExitCode {
         Case {i: 10, o: 3},
         Case {i: 2147395599, o: 46339},
     ];
-    let mut errors: ExitCode = ExitCode::SUCCESS;
+    let mut errors = ExitCode::SUCCESS;
     for case in cases {
         let out = Solution::my_sqrt(case.i);
         if out != case.o {
