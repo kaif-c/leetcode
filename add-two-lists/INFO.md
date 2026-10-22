@@ -1,12 +1,13 @@
-# Binary Tree Inorder Traversal
+# Add Two Numbers
 
-## Difficulty: Easy
+## Difficulty: Medium
 
 **Description**:
 
-Given the root of a binary tree, return the inorder traversal of its nodes' values.
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 
 **Constraints**:
 
-- The number of nodes in the tree is in the range [0, 100].
-- -100 <= Node.val <= 100
+- The number of nodes in each linked list is in the range [1, 100].
+- 0 <= Node.val <= 9
+- It is guaranteed that the list represents a number that does not have leading zeros.
