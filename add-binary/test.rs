@@ -14,7 +14,7 @@ pub fn main() -> ExitCode {
         Case {i: ["101", "11"], o: "1000"},
         Case {i: ["10", "0"], o: "10"}
     ];
-    let mut errors: ExitCode = ExitCode::SUCCESS;
+    let mut errors = ExitCode::SUCCESS;
     for case in cases {
         let out = Solution::add_binary(case.i[0].to_string(), case.i[1].to_string());
         if out != case.o.to_string() {
