@@ -2,9 +2,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
-        if nums.len() <= 2 {
-            return Vec::new();
-        }
+        // nums is always greater than 3
         // A sorting followed by 2 pointer approach
         nums.sort_unstable();
         let mut ret: Vec<Vec<i32>> = Vec::new();
