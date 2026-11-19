@@ -5,7 +5,7 @@ struct ListNode {
 
 // Time = O(n)
 // Space = O(1)
-struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
+struct ListNode* removeNthFromEnd(struct ListNode* head, const int n) {
     // n <= len(head)
     // sz <= 30
 
@@ -15,15 +15,13 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
     // Now we keep iterating through both head, to_swap, and before_to_swap
     // until we reach the end
     // Now to_swap & before_to_swap is set correctly
-    unsigned char offset = 0;
     struct ListNode *before_to_rem = 0;
     struct ListNode *iter = head;
 
     // Find nth from begining
-    while (iter) {
-        ++offset;
+    for (unsigned char offset = 0; iter; ++offset) {
         iter = iter->next;
-        if (offset > n) {
+        if (offset == n) {
             before_to_rem = head;
             break;
         }
@@ -43,7 +41,6 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
         return head->next;
 
     // Remove from middle
-    if (before_to_rem->next)
-        before_to_rem->next = before_to_rem->next->next;
+    before_to_rem->next = before_to_rem->next->next;
     return head;
 }
